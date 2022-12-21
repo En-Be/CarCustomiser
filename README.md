@@ -33,4 +33,34 @@ A video walkthrough of your project where you explain how you created it and sho
 
 ---
 
+## User Stories
+
+```
+As a user,
+so I can see what car I am buying,
+a want a view I can rotate.
+```
+
+```
+As a user,
+so I can compare the different models,
+I want to toggle a view that displays them side-by-side with written details.
+```
+
+```
+As a user, 
+so I can personalise the car,
+I want to choose different models, paint jobs, and accessories.
+```
+
+```
+As a user,
+so I know how much it would cost,
+I want to see an updated price displayed.
+```
+
+
+
+---
+
 Please see the [approach](APPROACH.md) file for the development process.

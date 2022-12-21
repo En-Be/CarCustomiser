@@ -11,3 +11,18 @@ DONE
 - Populate README with task
 
 ---
+
+## Session 002
+
+### Minutes: 30
+
+TODO
+- Diagram the UX
+
+DONE
+- Installed draw.io
+- Rough UX layout:
+
+![layout](wip/UX.png)
+
+---
