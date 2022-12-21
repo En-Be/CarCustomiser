@@ -26,3 +26,55 @@ DONE
 ![layout](wip/UX.png)
 
 ---
+
+## Session 003
+
+### 64 mins
+
+TODO
+- Add a gitIgnore unity template
+- Start a Unity project
+- Install unity testing package
+- TDD a spinning platform
+    - Tut on new unity testing framework
+    - Add a UI with buttons to rotate cube
+    - Test right button
+    - Test left button
+
+DONE
+- Add a gitIgnore unity template
+- Start a Unity project
+- Testing package installed by default
+- Added a cube and positioned camera
+- Created a canvas
+- Imported TMP
+- Added a UI button
+- Added an assembly reference in scripts folder
+- Added a PlayMode tests folder and Assembly Definition
+- Added a turntable script
+- Added a test asserting Turntable's RotateClockwise method increases the object's y rotation value over 0
+
+---
+
+## Session 004
+
+### Minutes: 180
+
+TODO
+- Add rotate methods to turntable
+- TDD ui buttons triggering rotate methods
+
+DONE
+- Added a RotateClockwise method
+- Test passes
+- Added an AntiClockwise test
+- Test fails
+- Added RotateAntiClockwise method
+- Test passes
+- Can't add new input system, gets namespace errors. Tried eveything I can find. Works in new project, will start again.
+- Rebuilt project, error not thrown. 
+- Hit another namespace error and can't get past it. Rather than spend any more time on this, I'm gong to scrap testing becuase it's leading down a massive rabbit hole time-sink that seems useless.
+- Figured out how to load scenes in test so it seems less useless now.
+- Started writing tests for the UI
+
+---

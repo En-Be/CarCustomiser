@@ -59,7 +59,12 @@ so I know how much it would cost,
 I want to see an updated price displayed.
 ```
 
-
+---
+## Tech stack
+- Unity/C#
+- Visual studio code
+- Draw.io
+- Github
 
 ---
 
