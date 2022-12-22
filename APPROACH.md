@@ -29,7 +29,7 @@ DONE
 
 ## Session 003
 
-### 64 mins
+### Minutes: 64
 
 TODO
 - Add a gitIgnore unity template
@@ -107,3 +107,29 @@ DONE
 - Test click not firing button
 - Test was simulating mouse movement but not working
 - Swapped mouse sim for straight button onclick invoke
+
+---
+
+## Session 007
+
+### Minutes: 80
+
+TODO
+- TDD holding the button to spin instead of click to move 1 degree
+
+DONE
+- Removed unused IFixture references
+- Added test triggering a pointerDown event
+- Test failing
+- Added a pointerDown event trigger on button
+- Added a bool that calls rotate when on
+- PointerDown makes bool true
+- Test passes
+- Updated test to check for pointer leaving stopping rotation
+- test fails
+- Added event triggers for pointer up and exit
+- test passes
+- Added tests for rotating anticlockwise
+- Tests failing
+- Added event triggers and methods switching bool
+- Tests pass
