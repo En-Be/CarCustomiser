@@ -133,3 +133,5 @@ DONE
 - Tests failing
 - Added event triggers and methods switching bool
 - Tests pass
+
+![wip_001](wip/wip_001.gif)
