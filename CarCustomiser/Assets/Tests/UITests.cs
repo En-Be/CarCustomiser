@@ -4,27 +4,29 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class UITests : InputTestFixture
 {
-    [UnityTest]
-    public IEnumerator TestGameStart()
+    [UnitySetUp]
+    public override void Setup()
     {
-        GameObject playButton = GameObject.Find("UI/ClockwiseButton");
+        base.Setup();
+        SceneManager.LoadScene("Main");
+    }
+
+    [UnityTest]
+    public IEnumerator RotateClockwiseButton()
+    {
+        yield return null;
+        GameObject button = GameObject.Find("UI/RotateClockwise");
         GameObject turntable = GameObject.Find("Turntable");
 
-        ClickUI(playButton);
+        button.GetComponent<Button>().onClick.Invoke();
         yield return null;
 
         Assert.That(turntable.transform.rotation.y, Is.GreaterThan(0));
-    }
-    
-    public void ClickUI(GameObject uiElement)
-    {
-        Camera camera = GameObject.Find("Main Camera").GetComponent<Camera>();
-        Vector3 screenPos = camera.WorldToScreenPoint(uiElement.transform.position);
-        // Set(mouse.position, screenPos);
-        // Click(mouse.leftButton);
+        TearDown();
     }
 }

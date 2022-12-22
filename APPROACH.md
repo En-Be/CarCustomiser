@@ -78,3 +78,32 @@ DONE
 - Started writing tests for the UI
 
 ---
+
+## Session 005
+
+### Minutes: 35
+
+TODO
+- TDD the clockwise button
+
+DONE
+- Wrote a test to click the button
+- Got errors about MOUSE
+- Added a call to TearDown after the test, reset editor
+- No errors, test not passing
+
+---
+
+## Session 006
+
+### Minutes: 60
+
+TODO
+- Pass test
+- TDD anticlockwise button
+
+DONE
+- Button working in editor but test not passing
+- Test click not firing button
+- Test was simulating mouse movement but not working
+- Swapped mouse sim for straight button onclick invoke
