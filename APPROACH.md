@@ -140,7 +140,7 @@ DONE
 
 ## Session 008
 
-### Minutes: 20
+### Minutes: 25
 
 TODO
 - Styling
@@ -151,3 +151,9 @@ DONE
 - Set camera to orthographic
 - Set background to solid colour
 - hover animation to ship
+- swapped button text for arrows
+
+![wip_002](wip/wip_002.gif)
+
+---
+
