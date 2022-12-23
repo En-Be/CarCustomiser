@@ -157,3 +157,22 @@ DONE
 
 ---
 
+## Session 009
+
+### Minutes: 70
+
+TODO
+- Domain modelling
+    - Ship (body, shield, boosters, weapons)
+    - UI (ship catalogue popup, options buttons, price display)
+- TDD ship colour
+
+DONE
+- Domain model
+![DomainModel](wip/DomainModel.png)
+- Added a test for changing colour
+- Passing test
+- Extend test, failing
+- Added a list of colours on Ship
+- Ship has a method to change colour of Body renderer
+- tests passing
