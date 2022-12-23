@@ -76,4 +76,29 @@ public class UITests
 
         Assert.That(turntable.transform.eulerAngles.y, Is.EqualTo(357));
     }
+
+    [UnityTest]
+    public IEnumerator ChangeShipColourButtons()
+    {
+        Setup();
+        Renderer body = GameObject.Find("Body").GetComponent<Renderer>();
+        GameObject button;
+
+        button = GameObject.Find("UI/BaseColour/ChangeColour00");
+        button.GetComponent<Button>().onClick.Invoke();
+        yield return null;
+        Assert.That(ColorUtility.ToHtmlStringRGB(body.material.color), Is.EqualTo("9FACCD"));
+        
+
+        button = GameObject.Find("UI/BaseColour/ChangeColour01");
+        button.GetComponent<Button>().onClick.Invoke();
+        yield return null;
+        Assert.That(ColorUtility.ToHtmlStringRGB(body.material.color), Is.EqualTo("CC9FA7"));
+
+        
+        button = GameObject.Find("UI/BaseColour/ChangeColour02");
+        button.GetComponent<Button>().onClick.Invoke();
+        yield return null;
+        Assert.That(ColorUtility.ToHtmlStringRGB(body.material.color), Is.EqualTo("F8F2B8"));
+    }
 }

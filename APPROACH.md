@@ -176,3 +176,20 @@ DONE
 - Added a list of colours on Ship
 - Ship has a method to change colour of Body renderer
 - tests passing
+
+---
+
+## Session 009
+
+### Minutes: 35
+
+TODO
+- TDD the colour change UI
+
+DONE
+- Added a test
+- Test failed
+- Added buttons
+- Test passes
+- Changed buttons to have listener added by script instead of trigger assigned in editor
+![wip_003](wip/wip_003.gif)
