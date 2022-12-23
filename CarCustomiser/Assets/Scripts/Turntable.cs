@@ -30,7 +30,7 @@ public class Turntable : MonoBehaviour
     public void RotateAntiClockwise()
     {
         gameObject.transform.Rotate(0,-1,0);
-        Debug.Log("rotated clockwise; y = " + transform.eulerAngles.y);
+        Debug.Log("rotated clockwise; y = " + transform.eulerAngles.y); 
     }
 
     public void SwitchClockwiseRotationOn()

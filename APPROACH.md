@@ -135,3 +135,19 @@ DONE
 - Tests pass
 
 ![wip_001](wip/wip_001.gif)
+
+---
+
+## Session 008
+
+### Minutes: 20
+
+TODO
+- Styling
+
+DONE
+- Imported turntable
+- Imported font
+- Set camera to orthographic
+- Set background to solid colour
+- hover animation to ship
