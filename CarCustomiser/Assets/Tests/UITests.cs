@@ -103,22 +103,72 @@ public class UITests
     }
 
     [UnityTest]
+    public IEnumerator OpenShipCatalogue()
+    {
+        Setup();
+        GameObject button;
+        button = GameObject.Find("UI/OpenShipBodyCatalogue");
+        button.GetComponent<Button>().onClick.Invoke();
+        yield return null;
+
+        GameObject window = GameObject.Find("UI/Ships");
+        Assert.IsTrue(window.activeSelf);
+    }
+
+    [UnityTest]
+    public IEnumerator CloseShipCatalogue()
+    {
+        Setup();
+        GameObject button;
+        button = GameObject.Find("UI/OpenShipBodyCatalogue");
+        button.GetComponent<Button>().onClick.Invoke();
+        yield return null;
+
+        button = GameObject.Find("UI/Ships/ShipBody/Ship00");
+        button.GetComponent<Button>().onClick.Invoke();
+        yield return null;
+
+        GameObject window = GameObject.Find("UI/Ships");
+        Assert.IsNull(window);
+    }
+
+    [UnityTest]
     public IEnumerator ChangeShipBodyButtons()
     {
         Setup();
         GameObject body = GameObject.FindGameObjectWithTag("Body");
         GameObject button;
+        GameObject catalogueButton;
 
-        button = GameObject.Find("UI/ShipBody/Ship00");
+        catalogueButton = GameObject.Find("UI/OpenShipBodyCatalogue");
+        catalogueButton.GetComponent<Button>().onClick.Invoke();
+        yield return null;
+
+        button = GameObject.Find("UI/Ships/ShipBody/Ship00");
         button.GetComponent<Button>().onClick.Invoke();
         yield return null;
         body = GameObject.FindGameObjectWithTag("Body");
         Assert.That(body.name, Is.EqualTo("Body00"));
 
-        button = GameObject.Find("UI/ShipBody/Ship01");
+        catalogueButton = GameObject.Find("UI/OpenShipBodyCatalogue");
+        catalogueButton.GetComponent<Button>().onClick.Invoke();
+        yield return null;
+
+        button = GameObject.Find("UI/Ships/ShipBody/Ship01");
+        Debug.Log(button);
         button.GetComponent<Button>().onClick.Invoke();
         yield return null;
         body = GameObject.FindGameObjectWithTag("Body");
         Assert.That(body.name, Is.EqualTo("Body01"));
+
+        catalogueButton = GameObject.Find("UI/OpenShipBodyCatalogue");
+        catalogueButton.GetComponent<Button>().onClick.Invoke();
+        yield return null;
+
+        button = GameObject.Find("UI/Ships/ShipBody/Ship02");
+        button.GetComponent<Button>().onClick.Invoke();
+        yield return null;
+        body = GameObject.FindGameObjectWithTag("Body");
+        Assert.That(body.name, Is.EqualTo("Body02"));
     }
 }

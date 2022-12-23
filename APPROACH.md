@@ -218,4 +218,19 @@ DONE
 - Updated domain diagram
 ![DomainModel_01](wip/DomainModel_01.png)
 
+---
 
+## Session 011
+
+### Minutes: 50 
+
+TODO
+- TDD Ship catalogue UI
+
+DONE
+- Test looking for button to open window and check window is not null
+- Window added with button that activates
+- Test to close window by selecting ship model
+- Window closes, test passing
+![wip_005](wip/wip_005.gif)
+- Had to do more setup in old tests
