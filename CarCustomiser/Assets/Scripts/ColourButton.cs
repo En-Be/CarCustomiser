@@ -8,7 +8,7 @@ public class ColourButton : MonoBehaviour
     public int buttonNumber;
     public Ship ship;
     private Button button;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +18,7 @@ public class ColourButton : MonoBehaviour
 
     void ChangeColour()
     {
-        ship = GameObject.Find("Turntable/Ship").GetComponent<Ship>();
-        ship.ChangeColour(buttonNumber);
+        Turntable turntable = GameObject.Find("Turntable").GetComponent<Turntable>();
+        turntable.ChangeColour(buttonNumber);
     }
 }

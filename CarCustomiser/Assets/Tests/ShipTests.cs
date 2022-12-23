@@ -20,8 +20,8 @@ public class ShipTests
     public IEnumerator ChangeShipColour()
     {
         Setup();
-        Ship ship = GameObject.Find("Ship").GetComponent<Ship>();
-        Renderer body = GameObject.Find("Body").GetComponent<Renderer>();
+        Ship ship = GameObject.FindGameObjectWithTag("Ship").GetComponent<Ship>();
+        Renderer body = GameObject.FindGameObjectWithTag("Body").GetComponent<Renderer>();
 
 
         ship.ChangeColour(0);
@@ -40,5 +40,45 @@ public class ShipTests
         yield return null;
 
         Assert.That(ColorUtility.ToHtmlStringRGB(body.material.color), Is.EqualTo("F8F2B8"));
+    }
+
+    [UnityTest]
+    public IEnumerator ColourChoicePersists()
+    {
+        Setup();
+        Ship ship = GameObject.FindGameObjectWithTag("Ship").GetComponent<Ship>();
+        Renderer body = GameObject.FindGameObjectWithTag("Body").GetComponent<Renderer>();
+        Turntable turntable = GameObject.Find("Turntable").GetComponent<Turntable>();
+
+        turntable.ChangeColour(1);
+        yield return null;
+        turntable.ChangeShip(0);
+        yield return null;
+        
+        body = GameObject.FindGameObjectWithTag("Body").GetComponent<Renderer>();
+        Assert.That(ColorUtility.ToHtmlStringRGB(body.material.color), Is.EqualTo("CC9FA7"));
+    }
+
+    [UnityTest]
+    public IEnumerator ChangeShipBase()
+    {
+        Setup();
+        Turntable turntable = GameObject.Find("Turntable").GetComponent<Turntable>();
+        GameObject body;
+
+        turntable.ChangeShip(0);
+        yield return null;
+        body = GameObject.FindGameObjectWithTag("Body");
+        Assert.That(body.name, Is.EqualTo("Body00"));
+
+        turntable.ChangeShip(1);
+        yield return null;
+        body = GameObject.FindGameObjectWithTag("Body");
+        Assert.That(body.name, Is.EqualTo("Body01"));
+        
+        turntable.ChangeShip(2);
+        yield return null;
+        body = GameObject.FindGameObjectWithTag("Body");
+        Assert.That(body.name, Is.EqualTo("Body02"));
     }
 }

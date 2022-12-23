@@ -81,7 +81,7 @@ public class UITests
     public IEnumerator ChangeShipColourButtons()
     {
         Setup();
-        Renderer body = GameObject.Find("Body").GetComponent<Renderer>();
+        Renderer body = GameObject.FindGameObjectWithTag("Body").GetComponent<Renderer>();
         GameObject button;
 
         button = GameObject.Find("UI/BaseColour/ChangeColour00");
@@ -100,5 +100,25 @@ public class UITests
         button.GetComponent<Button>().onClick.Invoke();
         yield return null;
         Assert.That(ColorUtility.ToHtmlStringRGB(body.material.color), Is.EqualTo("F8F2B8"));
+    }
+
+    [UnityTest]
+    public IEnumerator ChangeShipBodyButtons()
+    {
+        Setup();
+        GameObject body = GameObject.FindGameObjectWithTag("Body");
+        GameObject button;
+
+        button = GameObject.Find("UI/ShipBody/Ship00");
+        button.GetComponent<Button>().onClick.Invoke();
+        yield return null;
+        body = GameObject.FindGameObjectWithTag("Body");
+        Assert.That(body.name, Is.EqualTo("Body00"));
+
+        button = GameObject.Find("UI/ShipBody/Ship01");
+        button.GetComponent<Button>().onClick.Invoke();
+        yield return null;
+        body = GameObject.FindGameObjectWithTag("Body");
+        Assert.That(body.name, Is.EqualTo("Body01"));
     }
 }

@@ -6,7 +6,15 @@ public class Turntable : MonoBehaviour
 {
     bool isRotatingClockwise = false;
     bool isRotatingAntiClockwise = false;
+    public GameObject[] ships;
+    public GameObject currentShip;
+    public Color[] colours;
+    public int currentColour;
 
+    void Start()
+    {
+        currentShip = GameObject.FindWithTag("Ship");
+    }
 
     void Update()
     {
@@ -53,4 +61,16 @@ public class Turntable : MonoBehaviour
         isRotatingAntiClockwise = false;
     }
 
+    public void ChangeShip(int i)
+    {
+        Destroy(currentShip);
+        currentShip = Instantiate(ships[i], this.transform);
+        currentShip.GetComponent<Ship>().ChangeColour(currentColour);
+    }
+
+    public void ChangeColour(int i)
+    {
+        currentColour = i;
+        currentShip.GetComponent<Ship>().ChangeColour(i);
+    }
 }

@@ -193,3 +193,27 @@ DONE
 - Test passes
 - Changed buttons to have listener added by script instead of trigger assigned in editor
 ![wip_003](wip/wip_003.gif)
+
+---
+
+## Session 010
+
+### Minutes: 14:15 - 
+
+TODO
+- TDD the ship swap logic
+- TDD the ship swap UI
+
+DONE
+- Testing turntable change ship method by checking ship base name
+- Made ship prefabs, in a list on turntable
+- Tests passing
+- Testing UI buttons changing ship
+- Test failing
+- Added buttons with scripts to trigger turntable
+- Tests passing
+- Colours doesn't stay when changing ship models
+- TDD for colour persistence, buttons trigger methods on turntable instead
+![wip_004](wip/wip_004.gif)
+
+
