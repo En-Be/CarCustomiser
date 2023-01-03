@@ -149,7 +149,7 @@ public class UITests
         button.GetComponent<Button>().onClick.Invoke();
         yield return null;
         body = GameObject.FindGameObjectWithTag("Body");
-        Assert.That(body.name, Is.EqualTo("Body00"));
+        Assert.That(body.name, Is.EqualTo("ship_00_base"));
 
         catalogueButton = GameObject.Find("UI/OpenShipBodyCatalogue");
         catalogueButton.GetComponent<Button>().onClick.Invoke();
@@ -160,7 +160,7 @@ public class UITests
         button.GetComponent<Button>().onClick.Invoke();
         yield return null;
         body = GameObject.FindGameObjectWithTag("Body");
-        Assert.That(body.name, Is.EqualTo("Body01"));
+        Assert.That(body.name, Is.EqualTo("ship_01_base"));
 
         catalogueButton = GameObject.Find("UI/OpenShipBodyCatalogue");
         catalogueButton.GetComponent<Button>().onClick.Invoke();
@@ -170,7 +170,7 @@ public class UITests
         button.GetComponent<Button>().onClick.Invoke();
         yield return null;
         body = GameObject.FindGameObjectWithTag("Body");
-        Assert.That(body.name, Is.EqualTo("Body02"));
+        Assert.That(body.name, Is.EqualTo("ship_02_base"));
     }
 
     [UnityTest]

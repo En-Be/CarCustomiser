@@ -285,6 +285,25 @@ DONE
 
 ---
 
+## Session 015
+
+### Minutes : 100
+
+TODO
+- Simple ship models with accessory objects and slots
+
+DONE
+- Simple ship models with accessory objects and slots
+![wip_008](wip/wip_008.jpg)
+- Models added to existing prefabs
+- Tests not passing, different object names
+- Added tags to objects
+- Updated names tests are looking for
+- Tests passing again
+![wip_009](wip/wip_009.gif)
+
+---
+
 TODO
 - Don't persist colours, have different options per ship instead
 - Create colour buttons from ship options on spawn

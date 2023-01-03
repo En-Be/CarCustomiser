@@ -69,16 +69,16 @@ public class ShipTests
         turntable.ChangeShip(0);
         yield return null;
         body = GameObject.FindGameObjectWithTag("Body");
-        Assert.That(body.name, Is.EqualTo("Body00"));
+        Assert.That(body.name, Is.EqualTo("ship_00_base"));
 
         turntable.ChangeShip(1);
         yield return null;
         body = GameObject.FindGameObjectWithTag("Body");
-        Assert.That(body.name, Is.EqualTo("Body01"));
+        Assert.That(body.name, Is.EqualTo("ship_01_base"));
         
         turntable.ChangeShip(2);
         yield return null;
         body = GameObject.FindGameObjectWithTag("Body");
-        Assert.That(body.name, Is.EqualTo("Body02"));
+        Assert.That(body.name, Is.EqualTo("ship_02_base"));
     }
 }
