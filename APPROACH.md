@@ -247,3 +247,26 @@ TODO
 DONE
 - Temp styling of models window
 ![wip_006](wip/wip_006.png)
+
+---
+
+## Session 013
+
+### Minutes: 45
+
+TODO
+- Update the domain model to include options and pricing
+- TDD the model price
+
+DONE
+- Updated domain model
+![DomainModel_02](wip/DomainModel_02.png)
+- Removed some redundant references
+- Created a GameManager that holds the price of the ship
+- Turntable gets the price of the ship and sends it to GameManager
+
+---
+
+TODO
+- Don't persist colours, have different options per ship instead
+- Create colour buttons from ship options on spawn

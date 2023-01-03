@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Turntable : MonoBehaviour
 {
+    public GameManager gameManager;
     bool isRotatingClockwise = false;
     bool isRotatingAntiClockwise = false;
     public GameObject[] ships;
@@ -13,7 +14,13 @@ public class Turntable : MonoBehaviour
 
     void Start()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         currentShip = GameObject.FindWithTag("Ship");
+        if(currentShip == null)
+        {
+            currentShip = Instantiate(ships[0], this.transform);
+            gameManager.SetPrice(currentShip.GetComponent<Ship>().Price());
+        }
     }
 
     void Update()
@@ -66,6 +73,7 @@ public class Turntable : MonoBehaviour
         Destroy(currentShip);
         currentShip = Instantiate(ships[i], this.transform);
         currentShip.GetComponent<Ship>().ChangeColour(currentColour);
+        gameManager.SetPrice(currentShip.GetComponent<Ship>().Price());
     }
 
     public void ChangeColour(int i)
