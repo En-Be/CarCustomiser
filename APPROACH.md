@@ -234,3 +234,16 @@ DONE
 - Window closes, test passing
 ![wip_005](wip/wip_005.gif)
 - Had to do more setup in old tests
+
+---
+
+## Session 012
+
+### Minutes: 30 
+
+TODO
+- Styling of models window
+
+DONE
+- Temp styling of models window
+![wip_006](wip/wip_006.png)
