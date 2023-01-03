@@ -267,6 +267,24 @@ DONE
 
 ---
 
+## Session 014
+
+### Minutes: 50 
+
+TODO
+- Make gameManager global
+- TDD the price UI
+
+DONE
+- Namespace not recognised
+- Added a TMPro assemply definition ref to allow naamespace ref
+- Test passes for initial setting
+- Extended test to include assertions for each ship's price
+- Test passes
+![wip_007](wip/wip_007.gif)
+
+---
+
 TODO
 - Don't persist colours, have different options per ship instead
 - Create colour buttons from ship options on spawn

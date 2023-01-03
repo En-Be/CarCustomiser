@@ -38,7 +38,6 @@ public class PriceTests
     {
         Setup();
         GameObject button;
-        GameManager gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
         button = GameObject.Find("UI/OpenShipBodyCatalogue");
         button.GetComponent<Button>().onClick.Invoke();
@@ -48,7 +47,7 @@ public class PriceTests
         button.GetComponent<Button>().onClick.Invoke();
         yield return null;
 
-        Assert.That(gameManager.TotalPrice(), Is.EqualTo(2000));
+        Assert.That(GameManager.Instance.TotalPrice(), Is.EqualTo(2000));
 
         
         button = GameObject.Find("UI/OpenShipBodyCatalogue");
@@ -59,6 +58,6 @@ public class PriceTests
         button.GetComponent<Button>().onClick.Invoke();
         yield return null;
 
-        Assert.That(gameManager.TotalPrice(), Is.EqualTo(3000));
+        Assert.That(GameManager.Instance.TotalPrice(), Is.EqualTo(3000));
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.TestTools;
 // using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
@@ -171,4 +172,37 @@ public class UITests
         body = GameObject.FindGameObjectWithTag("Body");
         Assert.That(body.name, Is.EqualTo("Body02"));
     }
+
+    [UnityTest]
+    public IEnumerator TotalPrice()
+    {
+        Setup();
+        GameObject button;
+        TextMeshProUGUI totalPrice = GameObject.Find("UI/TotalPrice").GetComponent<TextMeshProUGUI>();
+        Debug.Log(totalPrice);
+        Assert.That(totalPrice.text, Is.EqualTo("1000"));
+
+
+        button = GameObject.Find("UI/OpenShipBodyCatalogue");
+        button.GetComponent<Button>().onClick.Invoke();
+        yield return null;
+
+        button = GameObject.Find("UI/Ships/ShipBody/Ship01");
+        button.GetComponent<Button>().onClick.Invoke();
+        yield return null;
+
+        Assert.That(totalPrice.text, Is.EqualTo("2000"));
+
+
+        button = GameObject.Find("UI/OpenShipBodyCatalogue");
+        button.GetComponent<Button>().onClick.Invoke();
+        yield return null;
+
+        button = GameObject.Find("UI/Ships/ShipBody/Ship02");
+        button.GetComponent<Button>().onClick.Invoke();
+        yield return null;
+
+        Assert.That(totalPrice.text, Is.EqualTo("3000"));
+    }
+
 }
