@@ -319,6 +319,35 @@ DONE
 
 ---
 
+## Session 017
+
+### Minutes: 30
+
+TODO
+- TDD boosters and weapons and their UI
+
+DONE
+- Added test for boosters, failing
+- Added boosters tag for objects
+- Set boosters in ship ref
+- Set boosters to disabled by default
+- Test passing
+- Added test for weapons, failing
+- Added weapons tag
+- Set weapons to disabled by default
+- Set weapons ref in ship
+- Test passing
+- Added test for boosters UI, failing
+- Added booster button to UI and trigger
+- Test passing
+- Added test for weapons UI, failing
+- Added  weapons button to UI and trigger
+- Test passing
+![wip_011](wip/wip_011.gif)
+
+
+
+---
 TODO
 - Don't persist colours, have different options per ship instead
 - Create colour buttons from ship options on spawn

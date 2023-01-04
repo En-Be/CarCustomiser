@@ -86,4 +86,15 @@ public class Turntable : MonoBehaviour
     {
         currentShip.GetComponent<Ship>().ToggleShields();
     }
+
+    public void ToggleBoosters()
+    {
+        currentShip.GetComponent<Ship>().ToggleBoosters();
+    }
+
+    public void ToggleWeapons()
+    {
+        currentShip.GetComponent<Ship>().ToggleWeapons();
+    }
+
 }

@@ -102,4 +102,44 @@ public class ShipTests
         Assert.That(shields.activeInHierarchy, Is.EqualTo(false));
     }
 
+    [UnityTest]
+    public IEnumerator ToggleBoosters()
+    {
+        Setup();
+        Turntable turntable = GameObject.Find("Turntable").GetComponent<Turntable>();
+        GameObject boosters;
+
+        boosters = GameObject.FindGameObjectWithTag("Boosters");
+        Assert.That(boosters, Is.EqualTo(null));
+
+        turntable.ToggleBoosters();
+        boosters = GameObject.FindGameObjectWithTag("Boosters");
+        yield return null;
+        Assert.That(boosters.activeInHierarchy, Is.EqualTo(true));
+
+        turntable.ToggleBoosters();
+        yield return null;
+        Assert.That(boosters.activeInHierarchy, Is.EqualTo(false));
+    }
+
+    [UnityTest]
+    public IEnumerator ToggleWeapons()
+    {
+        Setup();
+        Turntable turntable = GameObject.Find("Turntable").GetComponent<Turntable>();
+        GameObject weapons;
+
+        weapons = GameObject.FindGameObjectWithTag("Weapons");
+        Assert.That(weapons, Is.EqualTo(null));
+
+        turntable.ToggleWeapons();
+        weapons = GameObject.FindGameObjectWithTag("Weapons");
+        yield return null;
+        Assert.That(weapons.activeInHierarchy, Is.EqualTo(true));
+
+        turntable.ToggleWeapons();
+        yield return null;
+        Assert.That(weapons.activeInHierarchy, Is.EqualTo(false));
+    }
+
 }

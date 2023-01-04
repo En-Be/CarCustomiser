@@ -196,6 +196,50 @@ public class UITests
     }
 
     [UnityTest]
+    public IEnumerator ToggleBoosters()
+    {
+        Setup();
+        GameObject button;
+        button = GameObject.Find("UI/ToggleBoosters");
+
+        GameObject boosters;
+        boosters = GameObject.FindGameObjectWithTag("Boosters");
+        Assert.That(boosters, Is.EqualTo(null));
+
+        button.GetComponent<Button>().onClick.Invoke();
+        yield return null;
+        boosters = GameObject.FindGameObjectWithTag("Boosters");
+        Assert.That(boosters.activeInHierarchy, Is.EqualTo(true));
+
+        button.GetComponent<Button>().onClick.Invoke();
+        yield return null;
+        boosters = GameObject.FindGameObjectWithTag("Boosters");
+        Assert.That(boosters, Is.EqualTo(null));
+    }
+    
+    [UnityTest]
+    public IEnumerator ToggleWeapons()
+    {
+        Setup();
+        GameObject button;
+        button = GameObject.Find("UI/ToggleWeapons");
+
+        GameObject weapons;
+        weapons = GameObject.FindGameObjectWithTag("Weapons");
+        Assert.That(weapons, Is.EqualTo(null));
+
+        button.GetComponent<Button>().onClick.Invoke();
+        yield return null;
+        weapons = GameObject.FindGameObjectWithTag("Weapons");
+        Assert.That(weapons.activeInHierarchy, Is.EqualTo(true));
+
+        button.GetComponent<Button>().onClick.Invoke();
+        yield return null;
+        weapons = GameObject.FindGameObjectWithTag("Weapons");
+        Assert.That(weapons, Is.EqualTo(null));
+    }
+
+    [UnityTest]
     public IEnumerator TotalPrice()
     {
         Setup();
