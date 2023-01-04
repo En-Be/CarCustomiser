@@ -2,6 +2,12 @@
 
 A simple product configurator application that can display a selection of car models, one at a time, and display the price and specifications of the selected model.
 
+![wip_013](wip/wip_013.gif)
+
+Total time in development: 1195 minutes (just under 20 hours).
+
+---
+
 *Requirements*
 
 The final version must run as a standalone application, either online or offline. The user must be able to do the following:
@@ -61,11 +67,11 @@ I want to see an updated price displayed.
 
 ---
 ## Tech stack
-- Unity/C#
+- Unity / C#
 - Visual studio code
 - Draw.io
 - Github
-
+- Blender
 ---
 
 Please see the [approach](APPROACH.md) file for the development process.

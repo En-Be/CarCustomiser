@@ -16,15 +16,11 @@ public class UIManager : MonoBehaviour
     {
         DestroyColourButtons();
         Debug.Log("make buttons");
-        int pos = 0;
         foreach(Color c in colours)
         {   
             GameObject button = Instantiate(colourButton, buttonHolder.transform);
-            button.transform.Translate(pos,0,0);
             button.GetComponent<Image>().color = c;
             colourButtons.Add(button);
-            pos += 60;
-
         }
     }
 

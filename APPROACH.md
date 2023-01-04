@@ -385,3 +385,16 @@ DONE
 ![wip_012](wip/wip_012.gif)
 
 ---
+
+## Session 020
+
+### Minutes: 50
+
+TODO
+- Make colour buttons spawn evenly on different screen sizes
+
+DONE
+- Added a layout group component to button parent
+- Styling
+
+![wip_013](wip/wip_013.gif)
