@@ -73,7 +73,7 @@ public class Turntable : MonoBehaviour
         Destroy(currentShip);
         currentShip = Instantiate(ships[i], this.transform);
         currentShip.GetComponent<Ship>().ChangeColour(currentColour);
-        gameManager.SetPrice(currentShip.GetComponent<Ship>().Price());
+        gameManager.SetPrice(GetTotalPrice());
     }
 
     public void ChangeColour(int i)
@@ -85,16 +85,25 @@ public class Turntable : MonoBehaviour
     public void ToggleShields()
     {
         currentShip.GetComponent<Ship>().ToggleShields();
+        gameManager.SetPrice(GetTotalPrice());
+
     }
 
     public void ToggleBoosters()
     {
         currentShip.GetComponent<Ship>().ToggleBoosters();
+        gameManager.SetPrice(GetTotalPrice());
     }
 
     public void ToggleWeapons()
     {
         currentShip.GetComponent<Ship>().ToggleWeapons();
+        gameManager.SetPrice(GetTotalPrice());
+    }
+
+    public int GetTotalPrice()
+    {
+        return currentShip.GetComponent<Ship>().Price();
     }
 
 }

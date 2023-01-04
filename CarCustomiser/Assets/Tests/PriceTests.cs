@@ -20,7 +20,7 @@ public class PriceTests
     {
         Setup();
         GameObject button;
-        GameManager gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        Assert.That(GameManager.Instance.TotalPrice(), Is.EqualTo(1000));
 
         button = GameObject.Find("UI/OpenShipBodyCatalogue");
         button.GetComponent<Button>().onClick.Invoke();
@@ -30,7 +30,7 @@ public class PriceTests
         button.GetComponent<Button>().onClick.Invoke();
         yield return null;
 
-        Assert.That(gameManager.TotalPrice(), Is.EqualTo(1000));
+        Assert.That(GameManager.Instance.TotalPrice(), Is.EqualTo(1000));
     }
 
     [UnityTest]
@@ -59,5 +59,51 @@ public class PriceTests
         yield return null;
 
         Assert.That(GameManager.Instance.TotalPrice(), Is.EqualTo(3000));
+    }
+
+    [UnityTest]
+    public IEnumerator AccessoriesHavePrices()
+    {
+        Setup();
+        GameObject button;
+        Assert.That(GameManager.Instance.TotalPrice(), Is.EqualTo(1000));
+
+        button = GameObject.Find("UI/ToggleBoosters");
+        button.GetComponent<Button>().onClick.Invoke();
+        yield return null;
+
+        Assert.That(GameManager.Instance.TotalPrice(), Is.EqualTo(1500));
+
+        button.GetComponent<Button>().onClick.Invoke();
+        yield return null;
+
+        Assert.That(GameManager.Instance.TotalPrice(), Is.EqualTo(1000));
+    }
+
+    [UnityTest]
+    public IEnumerator AccessoriesHaveDifferentPrices()
+    {
+        Setup();
+        GameObject button;
+        Assert.That(GameManager.Instance.TotalPrice(), Is.EqualTo(1000));
+
+        button = GameObject.Find("UI/ToggleBoosters");
+        button.GetComponent<Button>().onClick.Invoke();
+        yield return null;
+
+        Assert.That(GameManager.Instance.TotalPrice(), Is.EqualTo(1500));
+
+        
+        button = GameObject.Find("UI/ToggleWeapons");
+        button.GetComponent<Button>().onClick.Invoke();
+        yield return null;
+
+        Assert.That(GameManager.Instance.TotalPrice(), Is.EqualTo(3500));
+
+        button = GameObject.Find("UI/ToggleShields");
+        button.GetComponent<Button>().onClick.Invoke();
+        yield return null;
+
+        Assert.That(GameManager.Instance.TotalPrice(), Is.EqualTo(4500));
     }
 }

@@ -345,6 +345,24 @@ DONE
 - Test passing
 ![wip_011](wip/wip_011.gif)
 
+---
+
+## Session 018
+
+### Minutes: 45
+
+TODO
+- TDD the accessories pricing and UI
+
+DONE
+- Made some exposed variables private
+- Defined price differences
+![Prices](wip/Prices.png)
+- Added tests for accessories having prices
+- Made an Accessory class with a Price variable
+- Made a method in Ship that collects prices and adds them if accessory is active
+- Tests passing
+- Prices set for each model and accessories
 
 
 ---

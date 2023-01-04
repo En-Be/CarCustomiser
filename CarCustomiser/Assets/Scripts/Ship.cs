@@ -5,13 +5,15 @@ using UnityEngine;
 public class Ship : MonoBehaviour
 {
     public Color[] colours;
-    public Renderer bodyRenderer;
-    public GameObject shields;
-    public GameObject boosters;
-    public GameObject weapons;
-    
+
     [SerializeField]
-    private int price;
+    private int basePrice;
+    [SerializeField]
+    private Renderer bodyRenderer;
+    [SerializeField]
+    private GameObject shields, boosters, weapons;
+
+    private Accessory[] accessories;
 
     public string Colour()
     {
@@ -20,7 +22,17 @@ public class Ship : MonoBehaviour
 
     public int Price()
     {
-        return price;
+        int total = 0;
+        total += basePrice;
+        accessories = GetComponentsInChildren<Accessory>();
+        foreach(Accessory a in accessories)
+        {
+            if(a.gameObject.activeInHierarchy == true)
+            {
+                total += a.Price();
+            }
+        }
+        return total;
     }
 
     public void ChangeColour(int i)

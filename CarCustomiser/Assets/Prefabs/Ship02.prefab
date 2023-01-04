@@ -74,11 +74,11 @@ MonoBehaviour:
   - {r: 0.62352943, g: 0.6745098, b: 0.8039216, a: 1}
   - {r: 0.8, g: 0.62352943, b: 0.654902, a: 1}
   - {r: 0.972549, g: 0.9490196, b: 0.72156864, a: 1}
+  basePrice: 3000
   bodyRenderer: {fileID: 397474878683694282}
   shields: {fileID: 6469513466759325284}
   boosters: {fileID: 5207186053240826105}
   weapons: {fileID: 108004002219374288}
-  price: 3000
 --- !u!1001 &990471688457423745
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -165,6 +165,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9b36f068bb034e84280aeccaa5f9c992, type: 3}
   m_PrefabInstance: {fileID: 990471688457423745}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8344086059585455081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108004002219374288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba3f827d52f55414b8464f78fb72f179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 1000
 --- !u!4 &735324504815529066 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9b36f068bb034e84280aeccaa5f9c992, type: 3}
@@ -426,6 +439,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ca8eb828c59d8a34cb3c1b07826d98ad, type: 3}
   m_PrefabInstance: {fileID: 4936734578716218792}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &597264092761432526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5207186053240826105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba3f827d52f55414b8464f78fb72f179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 2000
 --- !u!1001 &6127496840893340469
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -517,3 +543,16 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 850bc2d8aa89a8740bf1c6a51667b912, type: 3}
   m_PrefabInstance: {fileID: 6127496840893340469}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5338310815525567960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6469513466759325284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba3f827d52f55414b8464f78fb72f179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 500
