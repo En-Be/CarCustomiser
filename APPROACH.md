@@ -304,6 +304,21 @@ DONE
 
 ---
 
+## Session 016
+
+### Minutes: 40
+
+TODO
+- TDD ship accessories and prices
+
+DONE
+- Test for ship_00 shield, failing
+- Added methods on ship to turn shields on or off, test passing
+- Test for UI button to trigger toggle
+- Added button to UI that triggers toggle, test passing
+
+---
+
 TODO
 - Don't persist colours, have different options per ship instead
 - Create colour buttons from ship options on spawn

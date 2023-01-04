@@ -174,6 +174,28 @@ public class UITests
     }
 
     [UnityTest]
+    public IEnumerator ToggleShields()
+    {
+        Setup();
+        GameObject button;
+        button = GameObject.Find("UI/ToggleShields");
+
+        GameObject shields;
+        shields = GameObject.FindGameObjectWithTag("Shields");
+        Assert.That(shields, Is.EqualTo(null));
+
+        button.GetComponent<Button>().onClick.Invoke();
+        yield return null;
+        shields = GameObject.FindGameObjectWithTag("Shields");
+        Assert.That(shields.activeInHierarchy, Is.EqualTo(true));
+
+        button.GetComponent<Button>().onClick.Invoke();
+        yield return null;
+        shields = GameObject.FindGameObjectWithTag("Shields");
+        Assert.That(shields, Is.EqualTo(null));
+    }
+
+    [UnityTest]
     public IEnumerator TotalPrice()
     {
         Setup();

@@ -75,6 +75,7 @@ MonoBehaviour:
   - {r: 0.8, g: 0.62352943, b: 0.654902, a: 1}
   - {r: 0.972549, g: 0.9490196, b: 0.72156864, a: 1}
   bodyRenderer: {fileID: 3701122694683510490}
+  shields: {fileID: 8725670292317481997}
   price: 2000
 --- !u!1001 &2638144950694173278
 PrefabInstance:
@@ -468,10 +469,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: ship_01_shields
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7ee1b65a87eb5414bab09fbbe4c44ddf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7ee1b65a87eb5414bab09fbbe4c44ddf, type: 3}
+      propertyPath: m_TagString
+      value: Shields
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ee1b65a87eb5414bab09fbbe4c44ddf, type: 3}
 --- !u!4 &8240494725156796087 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7ee1b65a87eb5414bab09fbbe4c44ddf, type: 3}
+  m_PrefabInstance: {fileID: 8491158004749439324}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8725670292317481997 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7ee1b65a87eb5414bab09fbbe4c44ddf, type: 3}
   m_PrefabInstance: {fileID: 8491158004749439324}
   m_PrefabAsset: {fileID: 0}

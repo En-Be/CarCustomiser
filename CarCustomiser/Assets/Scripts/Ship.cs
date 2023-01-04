@@ -6,10 +6,11 @@ public class Ship : MonoBehaviour
 {
     public Color[] colours;
     public Renderer bodyRenderer;
+    public GameObject shields;
 
     [SerializeField]
     private int price;
-    
+
     public string Colour()
     {
         return "Red";
@@ -23,5 +24,17 @@ public class Ship : MonoBehaviour
     public void ChangeColour(int i)
     {
         bodyRenderer.material.SetColor("_Color", colours[i]);
+    }
+
+    public void ToggleShields()
+    {
+        if(shields.activeInHierarchy)
+        {
+            shields.SetActive(false);
+        }
+        else
+        {
+            shields.SetActive(true);
+        }
     }
 }

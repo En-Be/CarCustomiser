@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Body
   - Ship
+  - Shields
   layers:
   - Default
   - TransparentFX

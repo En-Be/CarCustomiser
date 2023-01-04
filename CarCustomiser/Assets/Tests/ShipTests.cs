@@ -81,4 +81,25 @@ public class ShipTests
         body = GameObject.FindGameObjectWithTag("Body");
         Assert.That(body.name, Is.EqualTo("ship_02_base"));
     }
+
+    [UnityTest]
+    public IEnumerator ToggleShields()
+    {
+        Setup();
+        Turntable turntable = GameObject.Find("Turntable").GetComponent<Turntable>();
+        GameObject shields;
+
+        shields = GameObject.FindGameObjectWithTag("Shields");
+        Assert.That(shields, Is.EqualTo(null));
+
+        turntable.ToggleShields();
+        shields = GameObject.FindGameObjectWithTag("Shields");
+        yield return null;
+        Assert.That(shields.activeInHierarchy, Is.EqualTo(true));
+
+        turntable.ToggleShields();
+        yield return null;
+        Assert.That(shields.activeInHierarchy, Is.EqualTo(false));
+    }
+
 }

@@ -81,4 +81,9 @@ public class Turntable : MonoBehaviour
         currentColour = i;
         currentShip.GetComponent<Ship>().ChangeColour(i);
     }
+
+    public void ToggleShields()
+    {
+        currentShip.GetComponent<Ship>().ToggleShields();
+    }
 }
