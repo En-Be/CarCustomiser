@@ -71,9 +71,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colours:
-  - {r: 0.62352943, g: 0.6745098, b: 0.8039216, a: 1}
-  - {r: 0.8, g: 0.62352943, b: 0.654902, a: 1}
-  - {r: 0.972549, g: 0.9490196, b: 0.72156864, a: 1}
+  - {r: 0.3679245, g: 0, b: 0.05257027, a: 1}
+  - {r: 0.61, g: 0, b: 0.08714311, a: 1}
   basePrice: 1000
   bodyRenderer: {fileID: 7019237085157307412}
   shields: {fileID: 8274979459483609219}

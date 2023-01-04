@@ -364,8 +364,24 @@ DONE
 - Tests passing
 - Prices set for each model and accessories
 
-
 ---
+
+## Session 019
+
+### Minutes: 90
+
 TODO
 - Don't persist colours, have different options per ship instead
 - Create colour buttons from ship options on spawn
+
+DONE
+- Removed colour persistence test
+- Made a UIManager class with a method that is called when new ship models are loaded
+- Rewrote the colour change ui test to check for spawned button amount
+- Creates buttons but doesn't destroy them, test fails
+- Buttons are added to a list. Destroyed and then list wiped before new buttons are made
+- Base colour is set when ship spawns
+
+![wip_012](wip/wip_012.gif)
+
+---

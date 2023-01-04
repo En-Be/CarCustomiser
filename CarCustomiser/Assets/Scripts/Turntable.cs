@@ -9,8 +9,7 @@ public class Turntable : MonoBehaviour
     bool isRotatingAntiClockwise = false;
     public GameObject[] ships;
     public GameObject currentShip;
-    public Color[] colours;
-    public int currentColour;
+    public UIManager uiManager;
 
     void Start()
     {
@@ -18,8 +17,7 @@ public class Turntable : MonoBehaviour
         currentShip = GameObject.FindWithTag("Ship");
         if(currentShip == null)
         {
-            currentShip = Instantiate(ships[0], this.transform);
-            gameManager.SetPrice(currentShip.GetComponent<Ship>().Price());
+            SpawnShip(0);
         }
     }
 
@@ -71,15 +69,21 @@ public class Turntable : MonoBehaviour
     public void ChangeShip(int i)
     {
         Destroy(currentShip);
-        currentShip = Instantiate(ships[i], this.transform);
-        currentShip.GetComponent<Ship>().ChangeColour(currentColour);
-        gameManager.SetPrice(GetTotalPrice());
+        SpawnShip(i);
     }
 
-    public void ChangeColour(int i)
+    public void SpawnShip(int i)
     {
-        currentColour = i;
-        currentShip.GetComponent<Ship>().ChangeColour(i);
+        currentShip = Instantiate(ships[i], this.transform);
+        Ship ship = currentShip.GetComponent<Ship>();
+        ChangeColour(ship.colours[0]);
+        gameManager.SetPrice(GetTotalPrice());
+        uiManager.CreateColourButtons(ship.Colours());
+    }
+
+    public void ChangeColour(Color c)
+    {
+        currentShip.GetComponent<Ship>().ChangeColour(c);
     }
 
     public void ToggleShields()

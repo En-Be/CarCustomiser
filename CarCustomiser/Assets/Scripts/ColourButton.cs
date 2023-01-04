@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ColourButton : MonoBehaviour
 {
-    public int buttonNumber;
+    public Color color;
     public Ship ship;
     private Button button;
 
@@ -14,11 +14,12 @@ public class ColourButton : MonoBehaviour
     {
         button = this.GetComponent<Button>();
         button.onClick.AddListener(ChangeColour);
+        color = this.GetComponent<Image>().color;
     }
 
     void ChangeColour()
     {
         Turntable turntable = GameObject.Find("Turntable").GetComponent<Turntable>();
-        turntable.ChangeColour(buttonNumber);
+        turntable.ChangeColour(color);
     }
 }

@@ -83,24 +83,22 @@ public class UITests
     {
         Setup();
         Renderer body = GameObject.FindGameObjectWithTag("Body").GetComponent<Renderer>();
+        GameObject[] buttons;
+
+        buttons = GameObject.FindGameObjectsWithTag("ColourButton");
+        Assert.That(buttons.Length, Is.EqualTo(2));
+
         GameObject button;
-
-        button = GameObject.Find("UI/BaseColour/ChangeColour00");
+        button = GameObject.Find("UI/OpenShipBodyCatalogue");
         button.GetComponent<Button>().onClick.Invoke();
         yield return null;
-        Assert.That(ColorUtility.ToHtmlStringRGB(body.material.color), Is.EqualTo("9FACCD"));
-        
 
-        button = GameObject.Find("UI/BaseColour/ChangeColour01");
+        button = GameObject.Find("UI/Ships/ShipBody/Ship01");
         button.GetComponent<Button>().onClick.Invoke();
         yield return null;
-        Assert.That(ColorUtility.ToHtmlStringRGB(body.material.color), Is.EqualTo("CC9FA7"));
 
-        
-        button = GameObject.Find("UI/BaseColour/ChangeColour02");
-        button.GetComponent<Button>().onClick.Invoke();
-        yield return null;
-        Assert.That(ColorUtility.ToHtmlStringRGB(body.material.color), Is.EqualTo("F8F2B8"));
+        buttons = GameObject.FindGameObjectsWithTag("ColourButton");
+        Assert.That(buttons.Length, Is.EqualTo(3));
     }
 
     [UnityTest]
@@ -216,7 +214,7 @@ public class UITests
         boosters = GameObject.FindGameObjectWithTag("Boosters");
         Assert.That(boosters, Is.EqualTo(null));
     }
-    
+
     [UnityTest]
     public IEnumerator ToggleWeapons()
     {

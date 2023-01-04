@@ -15,9 +15,9 @@ public class Ship : MonoBehaviour
 
     private Accessory[] accessories;
 
-    public string Colour()
+    public Color[] Colours()
     {
-        return "Red";
+        return colours;
     }
 
     public int Price()
@@ -35,9 +35,9 @@ public class Ship : MonoBehaviour
         return total;
     }
 
-    public void ChangeColour(int i)
+    public void ChangeColour(Color c)
     {
-        bodyRenderer.material.SetColor("_Color", colours[i]);
+        bodyRenderer.material.SetColor("_Color", c);
     }
 
     public void ToggleShields()

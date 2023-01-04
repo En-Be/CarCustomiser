@@ -9,6 +9,7 @@ TagManager:
   - Shields
   - Boosters
   - Weapons
+  - ColourButton
   layers:
   - Default
   - TransparentFX
