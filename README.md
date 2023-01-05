@@ -8,7 +8,7 @@ Please see the [approach](APPROACH.md) file for the development process.
 
 Total time in development: 1195 minutes (just under 20 hours).
 
-To play the application on Windows, download [this folder](Playables/) and run the .exe
+To play the application on Windows, download [this folder](Playable/) and run the .exe
 
 ---
 
