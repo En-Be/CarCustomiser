@@ -214,8 +214,11 @@ DONE
 - Tests passing
 - Colours doesn't stay when changing ship models
 - TDD for colour persistence, buttons trigger methods on turntable instead
+
 ![wip_004](wip/wip_004.gif)
+
 - Updated domain diagram
+
 ![DomainModel_01](wip/DomainModel_01.png)
 
 ---

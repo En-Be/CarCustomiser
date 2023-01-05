@@ -1,0 +1,33 @@
+this is the assessment
+
+made in unity with github for version control
+
+took just under 20 hours to make spread over a few days
+
+about three hour of that was styling, I just did that because I enjoy it
+
+sessions fully tracked in the approach file (what I planned to do, what I did, how long it took)
+
+loose pomodoro, delineated the aims and set a timer 
+
+some sessions were longer
+
+domain diagrams and wip images 
+
+started with writing user stories from the requirements
+
+rough ux layout including all features
+
+hadn't done testing in unity before so had to figure that out
+
+been a minute since I used proper processes, a bit rusty
+
+got a bit stuck with simulating mouse clicks so scrapped that and just invoked the ui button methods
+
+unit tests aren't perfect
+- multiple assertions in some tests
+- not completely comprehensive
+
+things I would change:
+- first script (turntable) could probably be simplified, too many methods
+- prices are used in different places, could be encapsulated in a table to remove duplication (ui text and object value)
